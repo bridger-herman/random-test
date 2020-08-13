@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+    <script>
+        const NUM_SAMPLES = 1000000;
+        let rolls = [];
+
+        for (let i = 0; i < NUM_SAMPLES; i++) {
+            rolls.push(Math.random());
+        }
+
+        let sum = rolls.reduce((x, r) => x + r);
+        let avg = sum / rolls.length;
+        console.log(avg);
+    </script>
+</body>
+</html>
